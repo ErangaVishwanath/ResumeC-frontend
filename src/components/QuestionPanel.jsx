@@ -17,8 +17,8 @@ function QuestionPanel({ onQuestions }) {
   };
 
   return (
-    <div className="questions-container">
-      <h2 className="questions-title">Coding Questions</h2>
+    <div className="questions-card">
+      <h2 className="questions-title">⚡ Coding Questions</h2>
 
       <input
         type="text"
@@ -39,7 +39,7 @@ function QuestionPanel({ onQuestions }) {
       </select>
 
       <button onClick={fetchQuestions} className="questions-btn">
-        Get Questions
+        🎯 Get Questions
       </button>
 
       {questions.length > 0 && (

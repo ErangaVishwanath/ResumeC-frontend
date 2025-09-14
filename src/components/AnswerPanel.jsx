@@ -19,15 +19,15 @@ function AnswerPanel({ questions }) {
   };
 
   return (
-    <div className="answer-container">
-      <h2 className="answer-title">Submit Answers</h2>
+    <div className="answer-card">
+      <h2 className="answer-title">📝 Submit Answers</h2>
 
       {questions.map((q, i) => (
         <div key={i} className="question-block">
           <p className="question-text">{q.question_text}</p>
           <textarea
             className="answer-textarea"
-            rows="3"
+            rows="4"
             value={answers[q.question_text] || ""}
             onChange={(e) =>
               setAnswers({ ...answers, [q.question_text]: e.target.value })
@@ -37,12 +37,12 @@ function AnswerPanel({ questions }) {
       ))}
 
       <button onClick={handleSubmit} className="answer-btn">
-        Submit
+        🚀 Submit
       </button>
 
       {results.length > 0 && (
         <div className="results-container">
-          <h3 className="results-title">Results:</h3>
+          <h3 className="results-title">📊 Results</h3>
           {results.map((r, i) => (
             <div key={i} className="result-card">
               <p>
